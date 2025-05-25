@@ -3,7 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Ansonia Facts",
-  description: "Buried in Debt. Starved of Truth. Uncovering the Hidden Costs of 12 Years Under Cassetti",
+  description:
+    "Buried in Debt. Starved of Truth. Uncovering the Hidden Costs of 12 Years Under Cassetti",
 };
 
 export default function RootLayout({
@@ -32,9 +33,11 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
-        <footer className="place-self-center mt-24 mb-10 border-[1px] border-white p-1 tracking-tighter text-sm">
-          <p>PAID FOR BY ANSONIA DTC, JAMES MALLOY, TREASURER</p>
-        </footer>
+        <div className="text-center">
+          <footer className="mt-24 mb-10 border-[1px] border-white p-1 tracking-tighter text-sm inline-block">
+            PAID FOR BY ANSONIA DTC, JAMES MALLOY, TREASURER
+          </footer>
+        </div>
       </body>
     </html>
   );
