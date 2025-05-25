@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navigation from "./components/navigation";
 
 export const metadata: Metadata = {
   title: "Ansonia Facts",
@@ -15,23 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav className="p-8 text-right text-lg">
-          <div className="font-bold">
-            <a href="#" className="mr-4 inline tracking-tighter">
-              HOME
-            </a>
-            <a href="#issues" className="dropdown mr-2 inline">
-              THE ISSUES
-            </a>
-
-            <a href="#about" className="mr-4 inline tracking-tighter">
-              ABOUT
-            </a>
-            <a href="#contact" className="mr-4 inline tracking-tighter">
-              CONTACT
-            </a>
-          </div>
-        </nav>
+        <Navigation></Navigation>
         {children}
         <div className="text-center">
           <footer className="mt-24 mb-10 border-[1px] border-white p-1 tracking-tighter text-sm inline-block">
@@ -41,19 +26,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
-
-{
-  /*
-  
-  <div>
-              <div className="dropdown-content">
-                <a href="#city-financials">City Financials</a>
-                <a href="#city-scandals">City Scandals</a>
-                <a href="#wpca-sale">The WPCA Sale</a>
-                <a href="#personal-scandals">Personal Scandals</a>
-              </div>
-            </div>
-
-  */
 }
