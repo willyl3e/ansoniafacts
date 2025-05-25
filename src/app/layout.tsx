@@ -1,16 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,11 +13,44 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
+        <nav className="p-8 text-right text-lg">
+          <div className="font-bold">
+            <a href="#" className="mr-4 inline tracking-tighter">
+              HOME
+            </a>
+            <a href="#issues" className="dropdown mr-2 inline">
+              THE ISSUES
+            </a>
+
+            <a href="#about" className="mr-4 inline tracking-tighter">
+              ABOUT
+            </a>
+            <a href="#contact" className="mr-4 inline tracking-tighter">
+              CONTACT
+            </a>
+          </div>
+        </nav>
         {children}
+        <footer className="place-self-center mt-24 mb-10 border-[1px] border-white p-1 tracking-tighter text-sm">
+          <p>PAID FOR BY ANSONIA DTC, JAMES MALLOY, TREASURER</p>
+        </footer>
       </body>
     </html>
   );
+}
+
+{
+  /*
+  
+  <div>
+              <div className="dropdown-content">
+                <a href="#city-financials">City Financials</a>
+                <a href="#city-scandals">City Scandals</a>
+                <a href="#wpca-sale">The WPCA Sale</a>
+                <a href="#personal-scandals">Personal Scandals</a>
+              </div>
+            </div>
+
+  */
 }
