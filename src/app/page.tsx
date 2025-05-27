@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div className="ml-10 mr-10">
-      <div className="text-center h-[90vh] flex items-center justify-center max-sm:scale-[70%]">
+    <div>
+      <div className="text-center h-[90vh] flex items-center justify-center max-sm:scale-[70%] bg-[url(/ansonia.png)] bg-no-repeat bg-center bg-cover">
         <div>
           <h1 className="text-9xl font-bold tracking-tighter">ANSONIA</h1>
           <h2 className="mt-12 mb-3 text-5xl tracking-tight">
